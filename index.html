@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명지대 바이브 코딩 부트캠프</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="https://www.mju.ac.kr/sites/mju_ht/images/logo.png" alt="명지대학교 로고" class="h-8">
+                    <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        바이브 코딩 부트캠프
+                    </h1>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link">메인</a>
+                    <a href="/mju-vibe-coding/reviews.html" class="nav-link">후기</a>
+                    <a href="/mju-vibe-coding/projects.html" class="nav-link">결과물</a>
+                    <a href="/mju-vibe-coding/apply.html" class="btn-primary">수강 신청</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden mt-4 pt-4 border-t border-white/10">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link">메인</a>
+                    <a href="/mju-vibe-coding/reviews.html" class="nav-link">후기</a>
+                    <a href="/mju-vibe-coding/projects.html" class="nav-link">결과물</a>
+                    <a href="/mju-vibe-coding/apply.html" class="btn-primary">수강 신청</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex items-center justify-center text-center px-6 pt-20">
+        <div class="container mx-auto max-w-4xl animate-fade-in-up">
+            <div class="mb-8">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    <span class="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+                        명지대 바이브 코딩
+                    </span>
+                    <br>
+                    <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        부트캠프
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                    AI와 함께하는 개발의 새로운 패러다임을 경험하세요
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="/mju-vibe-coding/apply.html" class="btn-primary text-lg px-8 py-4">
+                        지금 바로 신청하기 →
+                    </a>
+                    <a href="#curriculum" class="text-blue-400 hover:text-blue-300 transition-colors font-medium">
+                        커리큘럼 보기
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+                <div class="text-center">
+                    <div class="stat-number">6</div>
+                    <p class="text-gray-400">일간 강의</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">3</div>
+                    <p class="text-gray-400">프로젝트 단계</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">AI</div>
+                    <p class="text-gray-400">기반 교육</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">1:1</div>
+                    <p class="text-gray-400">맞춤 멘토링</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="py-24 px-6 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        6일간의 특별한 여정
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">체계적인 커리큘럼으로 AI 시대의 개발자가 되어보세요</p>
+            </div>
+            
+            <div class="timeline space-y-8">
+                <div class="timeline-item animate-slide-in-left">
+                    <div class="feature-card">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-blue-400">1일차</h3>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full">Foundation</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">바이브 코딩의 이해와 환경세팅</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            바이브 코딩의 이해와 환경세팅, 기반지식 학습, 다양한 분야에 활용, 배포, 바이브 코딩의 프롬프트 입력 방법, CursorAI, ChatGPT를 활용하여 주제에 맞는 파이썬 코드 작성 실습
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-slide-in-right">
+                    <div class="feature-card">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-cyan-400">2일차</h3>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-sm rounded-full">Design & Backend</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">디자인과 백엔드 연동</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            바이브 코딩을 위한 디자인, UI/UX 디자인, Firebase 구조 소개 및 설정, Firebase와 FastAPI 연동 실습
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-slide-in-left">
+                    <div class="feature-card">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-purple-400">3일차</h3>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full">Advanced</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">고급 기능 설계와 React</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            백엔드 연결 등 고급 기능 설계, 고급 기능을 위해 알아야 할 지식, 프롬프트 기반 발성법, 문제 정의 및 페르소나 설정, React 기본 구조 및 Vite 환경 설정
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-slide-in-right">
+                    <div class="feature-card">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-green-400">4일차</h3>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-full">Integration</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Firebase 연동과 API 구축</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            Firebase 연동 로그인 UI 구성, FastAPI 기본 구조, Firebase 인증 API 및 CRUD 실습
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-slide-in-left">
+                    <div class="feature-card">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-yellow-400">5일차</h3>
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-sm rounded-full">AI Agent</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">MCP와 Agent 설계</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            MCP 개요 및 Agent 설계, 랭크파와 MCP 연동 실습, GitHub 기반 협업
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-slide-in-right">
+                    <div class="feature-card">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-red-400">6일차</h3>
+                            <span class="px-3 py-1 bg-red-500/20 text-red-300 text-sm rounded-full">Production</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">배포와 최종 완성</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            TDD, 코드 리뷰, 커밋 메시지, 문서화 실습, Firebase Hosting, GCP 기본, 배포 실습 및 디버깅, 문제 해결 제안서 작성 워크숍
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section class="py-24 px-6 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                        3단계 프로젝트 멘토링
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">실전 프로젝트를 통한 체계적인 학습</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card animate-fade-in-up">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-white">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-400">기획안 멘토링</h3>
+                        <p class="text-sm text-blue-300 mt-2">(온라인_비대면)</p>
+                    </div>
+                    <p class="text-gray-300 text-center">
+                        팀별 기획안 검토, 기능 구현 계획 수립
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-in-up">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-white">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyan-400">세부구현 멘토링</h3>
+                    </div>
+                    <p class="text-gray-300 text-center">
+                        기능별 세부(백엔드/프론트), MCP/Agent 연동 점검
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-in-up">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-white">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-400">집중 프로젝트</h3>
+                    </div>
+                    <p class="text-gray-300 text-center">
+                        팀별 집중 프로젝트 및 팀별 순환 멘토링 진행
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="py-24 px-6 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                        강사 소개
+                    </span>
+                </h2>
+            </div>
+            
+            <div class="feature-card max-w-2xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTVfMjYy%2FMDAxNzA3OTk3MjU3NzQ3.OQMLauAFF3-Kj_80Z3X5u-1-2e_6fBw-g_qAg_G0oOIg.e_uI0xJ_NlS6Kz_gUAb_S2vYj0L3d2f-s_b2j_Hw_v8g.JPEG.doctorkorea1%2F%25C4%25B8%25C3%25B3_2024-02-15_203350.jpg&type=sc960_832" 
+                             alt="양진욱 강사" 
+                             class="w-32 h-32 rounded-full object-cover border-4 border-blue-500/30">
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <h3 class="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                            양진욱
+                        </h3>
+                        <p class="text-xl text-gray-300 mb-4">주식회사 한시경 대표</p>
+                        <p class="text-gray-400 leading-relaxed">
+                            AI 시대의 개발 패러다임을 선도하며, 실무진들에게 바이브 코딩 방법론을 전수하고 있는 전문가입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6 bg-gradient-to-r from-blue-600/10 via-cyan-600/10 to-blue-600/10">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-white to-gray-100 bg-clip-text text-transparent">
+                        지금 시작하세요
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    AI와 함께하는 새로운 개발 경험을 놓치지 마세요
+                </p>
+                <a href="/mju-vibe-coding/apply.html" class="btn-primary text-xl px-12 py-4">
+                    수강 신청하기 →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 backdrop-blur-md border-t border-white/10">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">(주)한시경</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p>대표: 양진욱 | 사업자번호: 189-81-02353 | 정보통신업</p>
+                        <p>주소: 서울특별시 서초구 서초대로74길 51, 1304호(서초동, 강남역 롯데골드로즈)</p>
+                        <p>전화: 02-2043-2748 | 이메일: onepm@onepm.kr</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center md:justify-end space-x-6">
+                    <a href="https://www.onepm.kr/" target="_blank" 
+                       class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0zm5.568 8.16c-.169 1.858-.896 3.433-2.001 4.72-.524.61-1.112 1.142-1.746 1.59-.536.378-1.112.71-1.713 1.008-.6.3-1.235.563-1.883.788a15.921 15.921 0 01-1.98.563c-.677.14-1.367.24-2.062.301-.695.061-1.393.085-2.087.073.022-.961.11-1.915.262-2.858.152-.943.371-1.875.657-2.79.286-.915.64-1.817 1.06-2.698.42-.88.906-1.738 1.456-2.567.55-.83 1.164-1.63 1.839-2.393.675-.762 1.41-1.487 2.202-2.168.792-.681 1.64-1.318 2.54-1.906.9-.588 1.853-1.128 2.854-1.618 1.001-.49 2.048-.931 3.138-1.319 1.09-.388 2.222-.725 3.392-1.006z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@hansikyung" target="_blank" 
+                       class="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right').forEach((el) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
